@@ -40,6 +40,8 @@ document.getElementById('search-text').addEventListener('click', function(){
     const inputField = document.getElementById('input-value');
     const inputValue = inputField.value;
     phoneData(inputValue);
+    phoneContainer.innerHTML = '';
+    inputField.value = '';
 
 })
 
