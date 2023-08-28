@@ -28,7 +28,7 @@
                       <div class="">
                         <h1 class="text-6xl font-bold">Apple Iphone 13 Pro Max</h1>
                         <p class="py-6">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humou.</p>
-                        <button class="btn primary-bg text-xl capitalize text-white">Search</button>
+                        <button class="btn primary-bg text-xl capitalize text-white">Buy Now</button>
                         
                       </div>
                       
@@ -42,15 +42,15 @@
             <div class="flex flex-col justify-center items-center gap-7">
                 <h3 class="text-4xl">Search your phone</h3>
                 <div class="flex gap-0 items-center w-1/2">
-                    <input class="bg-[#100f0f0d] w-full py-[11px] pl-12 placeholder:text-[#706F6F] rounded-s-lg" type="text" placeholder="Search your phone">
-                    <button class="btn primary-bg text-xl capitalize text-white rounded-s-none">Buy Now</button>
+                    <input id="input-value" class="bg-[#100f0f0d] w-full py-[11px] pl-12 placeholder:text-[#706F6F] rounded-s-lg" type="text" placeholder="Search your phone">
+                    <button id="search-text" class="btn primary-bg text-xl capitalize text-white rounded-s-none">Search</button>
                     <i class="fa-solid fa-magnifying-glass absolute pl-4 text-[#706F6F]"></i>
                 </div>
             </div>
         </section>
         <section class="pb-10">
-            <div class="flex justify-center items-center gap-6">
-                <div class="card w-96 bg-base-100 border">
+            <div id="phone-list" class="flex justify-center items-center gap-6 flex-wrap">
+                <!-- <div class="card w-96 bg-base-100 border">
                     <figure class="p-10 bg-[#0d6efd0d] mx-6 mt-6">
                       <img src="images/pngwing 3.png" alt="Shoes" class="rounded-xl" />
                     </figure>
@@ -59,8 +59,32 @@
                       <p class="text-[#706F6F]">If a dog chews shoes whose shoes does he choose?</p>
                       <h2 class="card-title text-2xl">$999</h2>
                       <div class="card-actions">
-                        <button class="btn primary-bg text-xl capitalize text-white">Show Details</button>
+
+                        
+                        <button class="btn primary-bg text-xl capitalize text-white" onclick="my_modal_${increaseID}.showModal()">Show Details</button>
+                        <dialog id="my_modal_${increaseID}" class="modal modal-bottom sm:modal-middle">
+                        <form method="dialog" class="modal-box">
+                            <h3 class="font-bold text-lg">Hello!</h3>
+                            <p class="py-4">Press ESC key or click the button below to close</p>
+                            <div class="modal-action">
+                            <button class="btn">Close</button>
+                            </div>
+                        </form>
+                        </dialog>
+                    
+
+        
+        <dialog id="my_modal_0" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class="modal-box">
+                <h3 class="font-bold text-lg">Hello!</h3>
+                <p class="py-4">Press ESC key or click the button below to close</p>
+                <div class="modal-action">
+                    <button class="btn">Close</button>
+                </div>
+            </form>
+        </dialog>
                       </div>
+                            
                     </div>
                   </div>
                   <div class="card w-96 bg-base-100 border  ">
@@ -88,9 +112,30 @@
                         <button class="btn primary-bg text-xl capitalize text-white">Show Details</button>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
+            
+                  <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                    <form method="dialog" class="modal-box">
+                        <figure class="p-10 bg-[#0d6efd0d]">
+                                <img id="p-image" alt="Shoes" class="rounded-xl block mx-auto" />
+                        </figure>
+                        <h3 id="p-name" class="font-bold text-2xl pt-4 text-left"></h3>
+                        <p class="py-4 text-left">If a dog chews shoes whose shoes does he choose?</p>
+                        <p class="py-1 text-left font-semibold">Storage: <span id="p-storage" class="font-normal"></span></p>
+                        <p class="py-1 text-left font-semibold">Display Size: <span id="p-size" class="font-normal"></span></p>
+                        <p class="py-1 text-left font-semibold">Chipset: <span id="p-chipset" class="font-normal"></span></p>
+                        <p class="py-1 text-left font-semibold">Memory: <span id="p-memory" class="font-normal"></span></p>
+                        <p class="py-1 text-left font-semibold">Release data: <span id="p-release" class="font-normal"></span></p>
+                        <p class="py-1 text-left font-semibold">Brand: <span id="p-brand" class="font-normal"></span></p>
+                        <p class="py-1 text-left font-semibold">GPS: <span id="p-gps" class="font-normal"></span></p>
+            
+                        <div class="modal-action">
+                            <button class="btn primary-bg text-xl capitalize text-white block mx-auto">Close</button>
+                        </div>
+                    </form>
+                    </dialog>
             </div>
-            <button class="btn primary-bg text-xl capitalize text-white block mx-auto my-12">Show All</button>
+            <button class="btn primary-bg text-xl capitalize text-white block mx-auto my-12 hidden">Show All</button>
         </section>
     </main>
     <footer class="bg-[#0d6efd0d] px-[5%]">
